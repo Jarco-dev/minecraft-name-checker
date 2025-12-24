@@ -8,6 +8,7 @@ Make sure to rename `.env.example` to `.env` and fill in the required values!
 - Configurable single name to check
 - configurable interval per minute
 - Discord webhook notification
+- Docker (compose) support (run multiple instances easily)
 
 ## Scripts
 
