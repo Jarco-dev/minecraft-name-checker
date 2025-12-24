@@ -1,0 +1,12 @@
+# Logs
+npm-debug.log*
+
+# IDE related
+.vscode
+.idea
+
+# Used in runtime
+node_modules
+dist
+storage
+.env

@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        // Core options
+        "module": "nodenext",
+        "target": "ES2022",
+        "moduleResolution": "node16",
+        "baseUrl": ".",
+        "outDir": "./dist",
+        "skipLibCheck": true,
+
+        // Decorative options
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "pretty": true,
+
+        // Coding rules
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noEmitOnError": true,
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnusedLabels": false,
+        "allowUnreachableCode": false,
+
+        // Code paths
+        "paths": {}
+    },
+    "include": ["./src"]
+}
