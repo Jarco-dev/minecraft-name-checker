@@ -42,9 +42,9 @@ async function checkAvailability(name: string): Promise<void> {
             "errorMessage" in body &&
             body.errorMessage.includes("Couldn't find")
         ) {
-            console.log(`${name} is either available now or in 30 days!`);
+            console.log(`${name} is either available now or in 37 days!`);
             sendNotification(
-                `\`${name}\` is either available now or in 30 days!\n[Try to claim it](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)`,
+                `\`${name}\` is either available now or in 37 days!\n[Try to claim it](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile)`,
             );
             return;
         }
