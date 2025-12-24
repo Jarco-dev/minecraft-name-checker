@@ -1,6 +1,6 @@
 {
     "name": "typescript-template",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A basic typescript project template",
     "main": "dist/index.js",
     "author": "Jarco-dev",
