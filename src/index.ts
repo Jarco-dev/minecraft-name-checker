@@ -65,9 +65,7 @@ async function sendNotification(message: string): Promise<void> {
     const embed = new EmbedBuilder()
         .setColor("#F88038")
         .setTitle("Minecraft Name Checker")
-        .setDescription(
-            `${message}`,
-        );
+        .setDescription(`${message}`);
 
     webhook
         .send({
