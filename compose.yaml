@@ -2,3 +2,9 @@ services:
   bot:
     build:
       target: production
+    environment:
+      INTERVAL_MINUTES: ${INTERVAL_MINUTES}
+      NOTIFICATION_TIMEOUT_MINUTES: ${NOTIFICATION_TIMEOUT_MINUTES}
+      USERNAME: ${USERNAME}
+      DISCORD_USER_ID: ${DISCORD_USER_ID}
+      DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL}

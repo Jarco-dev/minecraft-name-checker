@@ -6,3 +6,9 @@ services:
     volumes:
       - "./src:/usr/src/app/src"
       - "./tsconfig.json:/usr/src/app/tsconfig.json"
+    environment:
+      INTERVAL_MINUTES: ${INTERVAL_MINUTES}
+      NOTIFICATION_TIMEOUT_MINUTES: ${NOTIFICATION_TIMEOUT_MINUTES}
+      USERNAME: ${USERNAME}
+      DISCORD_USER_ID: ${DISCORD_USER_ID}
+      DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL}

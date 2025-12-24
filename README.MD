@@ -1,13 +1,13 @@
-# TypeScript Template
+# Minecraft name checker
 
-A basic TypeScript project template for Node.js applications
+Checks and notifies via a discord webhook when a minecraft username becomes available.\
+Make sure to rename `.env.example` to `.env` and fill in the required values!
 
 ## Features
 
-- TypeScript support
-- TypeScript paths support
-- Linting with ESLint + Prettier
-- GitHub actions ESLint + type check workflow
+- Configurable single name to check
+- configurable interval per minute
+- Discord webhook notification
 
 ## Scripts
 
