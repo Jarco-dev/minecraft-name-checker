@@ -2,8 +2,8 @@ import moment from "moment";
 import cron from "node-cron";
 
 import config from "./config";
+import { logWithDateTime } from "./logger";
 import { sendAvailableNotification, sendStartupNotification } from "./notify";
-import {logWithDateTime} from "./logger";
 
 async function checkAvailability(): Promise<void> {
     const res = await fetch(
