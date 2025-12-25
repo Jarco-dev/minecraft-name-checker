@@ -21,18 +21,34 @@ async function checkAvailability(): Promise<void> {
         return;
     }
 
-    const available = [];
+    const available: string[] = [];
+    const unavailable: string[] = [];
     const resUsernames = body.map((u) => u.name.toLowerCase());
     for (const username of Object.keys(config.NAME_TO_ID)) {
-        if (resUsernames.includes(username)) continue;
+        if (resUsernames.includes(username)) {
+            unavailable.push(username);
+            continue;
+        }
 
-        logWithDateTime(`${username} is now available`);
         sendAvailableNotification(
             username,
             `\`{{username}}\` will be released somewhere between now and 37 days!\n[Try to claim it](https://www.minecraft.net/en-us/msaprofile/mygames/editprofile) | Checked at ${moment.utc().format("YYYY-MM-DD HH:mm:ss")} UTC`,
         );
         available.push(username);
     }
+
+    logWithDateTime(
+        ...(available.length > 0
+            ? [
+                  `Available (${available.length}/${config.USERNAMES.length}): ${available.join(", ")}`,
+              ]
+            : []),
+        ...(unavailable.length > 0
+            ? [
+                  `Unavailable (${unavailable.length}/${config.USERNAMES.length}): ${unavailable.join(", ")}`,
+              ]
+            : []),
+    );
 }
 
 (async () => {
