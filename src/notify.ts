@@ -35,7 +35,7 @@ export function sendStartupNotification(): void {
         .setColor("#F88038")
         .setTitle("Minecraft Name Checker")
         .setDescription(
-            `Started successfully, checking very ${config.INTERVAL_MINUTES} minute(s) for availability on ${config.USERNAMES.map((u) => `\`${u}\``).join(", ")}`,
+            `Started successfully, checking every ${config.INTERVAL_MINUTES} minute(s) for availability on ${config.USERNAMES.map((u) => `\`${u}\``).join(", ")}`,
         );
 
     webhook.send({ embeds: [embed] });
