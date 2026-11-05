@@ -15,7 +15,9 @@ async function checkAvailability(): Promise<void> {
         },
     );
 
-    const body: { id: string; name: string }[] = await res.json();
+    const body: { id: string; name: string }[] = await res
+        .json()
+        .catch((err) => logWithDateTime(err, res, res.body));
     if (res.status !== 200 || !Array.isArray(body)) {
         console.log("Unexpected response from Mojang API", res, body);
         return;
