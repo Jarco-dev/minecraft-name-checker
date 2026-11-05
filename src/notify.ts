@@ -30,7 +30,7 @@ export function sendAvailableNotification(
         .catch(console.log);
 }
 
-export function sendStartupNotification(): void {
+export function sendStartupNotification(): Promise<void> {
     const embed = new EmbedBuilder()
         .setColor("#F88038")
         .setTitle("Minecraft Name Checker")
@@ -38,5 +38,5 @@ export function sendStartupNotification(): void {
             `Started successfully, checking every ${config.INTERVAL_MINUTES} minute(s) for availability on ${config.USERNAMES.map((u) => `\`${u}\``).join(", ")}`,
         );
 
-    webhook.send({ embeds: [embed] });
+    return webhook.send({ embeds: [embed] }).then(() => {});
 }
