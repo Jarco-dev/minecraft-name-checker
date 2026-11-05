@@ -14,7 +14,7 @@ RUN apk add --no-cache bash
 
 USER node
 
-CMD npm run dev
+CMD ["npm", "run", "dev"]
 
 FROM deps AS build
 
@@ -34,4 +34,4 @@ COPY package.json .
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/dist ./dist
 
-CMD npm run start
+CMD ["npm", "run", "start"]
